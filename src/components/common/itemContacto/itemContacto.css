@@ -1,0 +1,53 @@
+/* Fila de cada contacto */
+.item-contacto {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr; /* Columna fija para img, y resto repartido */
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+/* Imagen de perfil del contacto */
+.item-contacto img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Hace la imagen circular */
+    background-color: #e9ecef;
+    object-fit: cover;
+}
+
+/* Texto del nombre */
+.item-contacto p:nth-of-type(1) {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Texto del teléfono */
+.item-contacto p:nth-of-type(2) {
+    font-family: 'Segoe UI', sans-serif;
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* --- ESTADOS --- */
+
+/* Hover: Resalte suave al pasar el mouse */
+.item-contacto:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Active: Efecto de pulsación al hacer click */
+.item-contacto:active {
+    background-color: #e7f1ff;
+    transform: scale(0.99);
+}
