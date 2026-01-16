@@ -1,16 +1,16 @@
-import { Contactos } from "../../sections/contactos/Contactos";
-import { Formulario } from "../../sections/formulario/Formulario";
-
-let container = document.getElementById("container");
+import { Contactos } from "../../sections/contactos/Contactos.js";
+import { Formulario as FormularioComponent } from "../../sections/formulario/Formulario.js";
 
 let viewContacts = function () {
+    let container = document.getElementById("container");
     container.innerHTML = "";
     container.appendChild(Contactos());
 }
 
-let Formulario = function () {
+let viewFormulario = function () {
+    let container = document.getElementById("container");
     container.innerHTML = "";
-    container.appendChild(Formulario());
+    container.appendChild(FormularioComponent());
 }
 
-export { viewContacts, Formulario };
+export { viewContacts, viewFormulario };
