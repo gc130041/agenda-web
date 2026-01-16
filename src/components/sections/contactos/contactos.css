@@ -1,19 +1,14 @@
-/* Contenedor principal de la sección */
 .contactos {
-    flex: 1; /* Ocupa el espacio restante en el layout principal */
-    padding: 20px;
-    background-color: #ffffff;
-    height: 100vh; /* Altura total de la ventana */
-    overflow-y: auto; /* Permite scroll si hay muchos contactos */
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-/* Título de la sección */
 .contactos h2 {
-    font-family: 'Segoe UI', sans-serif;
-    color: #2c3e50;
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #f0f0f0;
+    font-size: 28px;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 10px;
 }
