@@ -1,52 +1,76 @@
+-app.css
 :root {
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
-    --bg-color: #f4f6f9;
-    --white: #ffffff;
-    --text-primary: #333333;
-    --text-secondary: #6c757d;
-    --border-color: #e0e0e0;
-    
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --border-radius: 8px;
-    --shadow: 0 2px 5px rgba(0,0,0,0.05);
+--primary-color: #007bff;
+--primary-hover: #0056b3;
+--bg-color: #f4f6f9;
+--white: #ffffff;
+--text-primary: #333333;
+--text-secondary: #6c757d;
+--border-color: #e0e0e0;
+
+--font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+--border-radius: 8px;
+--shadow: 0 2px 5px rgba(0,0,0,0.05);
+
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
 body {
-    font-family: var(--font-family);
-    background-color: var(--bg-color);
-    color: var(--text-primary);
+font-family: var(--font-family);
+background-color: var(--bg-color);
+color: var(--text-primary);
+}
+#app {
+width: 100vw;
+height: 100vh;
+display: grid;
+grid-template-columns: 260px 1fr;
+overflow: hidden;
+}
+#nav {
+background-color: var(--white);
+border-right: 1px solid var(--border-color);
+display: flex;
+flex-direction: column;
+padding: 20px 10px;
+gap: 10px;
+height: 100%;
+overflow-y: auto;
+z-index: 10;
+}
+#container {
+background-color: var(--bg-color);
+height: 100%;
+overflow-y: auto;
+position: relative;
+padding: 0;
+width: 100%;
 }
 
+@media (max-width: 768px) { 
 #app {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    overflow: hidden;
+grid-template-columns: 1fr;
+grid-template-rows: auto 1fr;
 }
 
 #nav {
-    background-color: var(--white);
-    border-right: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px;
-    gap: 10px;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    height: auto;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#container {
     height: 100%;
     overflow-y: auto;
 }
 
-#container {
-    background-color: var(--bg-color);
-    height: 100%;
-    overflow-y: auto;
-    position: relative;
-    padding: 0;
 }

@@ -1,41 +1,62 @@
 section {
-    width: 320px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    font-family: var(--font-family);
 }
 
 section h3 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    font-size: 24px;
 }
 
 section input[type="text"],
 section input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-family: var(--font-family);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+section input[type="text"]:focus,
+section input[type="password"]:focus {
+    border-color: var(--primary-color);
 }
 
 section button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #ffffff;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
-    border-radius: 4px;
-    font-size: 15px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 section button:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 480px) {
+    section {
+        margin: 40px auto;
+        padding: 20px;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+        max-width: 90%;
+    }
 }

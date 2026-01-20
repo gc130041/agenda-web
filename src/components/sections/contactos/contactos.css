@@ -12,3 +12,16 @@
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+    .contactos {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .contactos h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+}
