@@ -1,4 +1,5 @@
-import { TaskList } from "../contactos/db.js";
+import { TaskList, saveTasksToStorage } from "../../../storage/storage.js";
+
 let ToDoList = () => {
     let section = document.createElement("section");
     section.className = "todo-list";
@@ -36,6 +37,8 @@ let ToDoList = () => {
             task.done = !task.done;
             li.classList.toggle("done");
             checkbox.textContent = task.done ? "✔" : "";
+            
+            saveTasksToStorage(TaskList);
         });
 
         let deleteBtn = document.createElement("img");
@@ -51,8 +54,9 @@ let ToDoList = () => {
             let index = TaskList.indexOf(task);
             if (index > -1) {
                 TaskList.splice(index, 1);
+                // GUARDAR CAMBIOS
+                saveTasksToStorage(TaskList);
             }
-
 
             li.remove();
         });
@@ -67,6 +71,7 @@ let ToDoList = () => {
     return section;
 
 }
+
 let ToDoForm = () => {
     let form = document.createElement("form");
     form.className = "todo-form";
@@ -106,6 +111,10 @@ let ToDoForm = () => {
             done: false
         };
         TaskList.push(newTask);
+        
+        // GUARDAR CAMBIOS
+        saveTasksToStorage(TaskList);
+
         alert("Tarea guardada con éxito");
         input.value = "";
         inputDate.value = "";

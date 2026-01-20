@@ -1,5 +1,6 @@
 import { ItemContacto } from "../../common/itemContacto/ItemContacto.js";
-import { ContactList } from "./db.js";
+import { ContactList, saveContactsToStorage } from "../../../storage/storage.js";
+
 let Contactos = () => {
     let sectionContactos = document.createElement("section");
     sectionContactos.className = "contactos";
@@ -18,6 +19,7 @@ let Contactos = () => {
                 let index = ContactList.indexOf(contact);
                 if (index > -1) {
                     ContactList.splice(index, 1); 
+                    saveContactsToStorage(ContactList);
                 }
                 item.remove();
             }
