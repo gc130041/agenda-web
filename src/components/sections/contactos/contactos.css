@@ -1,27 +1,15 @@
 .contactos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     width: 100%;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
 }
 
 .contactos h2 {
-    font-size: 28px;
-    color: var(--text-primary);
-    margin-bottom: 25px;
-    border-bottom: 2px solid var(--border-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
     padding-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .contactos {
-        margin: 20px auto;
-        padding: 0 15px;
-    }
-
-    .contactos h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
+    border-bottom: 2px solid var(--border-color);
 }
