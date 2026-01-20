@@ -1,5 +1,6 @@
 import { Contactos } from "../../sections/contactos/Contactos.js";
 import { Formulario as FormularioComponent } from "../../sections/formulario/Formulario.js";
+import { ToDoList, ToDoForm } from "../../sections/toDoList/ToDoList.js";
 
 let viewContacts = function () {
     let container = document.getElementById("container");
@@ -13,4 +14,16 @@ let viewFormulario = function () {
     container.appendChild(FormularioComponent());
 }
 
-export { viewContacts, viewFormulario };
+let viewToDoList = function () {
+    let container = document.getElementById("container");
+    container.innerHTML = "";
+    container.appendChild(ToDoList());
+}
+
+let viewCreateTask = function () {
+    let container = document.getElementById("container");
+    container.innerHTML = "";
+    container.appendChild(ToDoForm());
+}
+
+export { viewContacts, viewFormulario, viewToDoList, viewCreateTask };

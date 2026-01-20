@@ -1,0 +1,113 @@
+.todo-list, .todo-form {
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.todo-list h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.todo-list__container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 5px solid var(--primary-color);
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.todo-item__checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.todo-item.done {
+    opacity: 0.6;
+    border-left-color: #28a745;
+}
+
+.todo-item.done .todo-item__checkbox {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.todo-item.done p {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.todo-form fieldset {
+    border: none;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.todo-form legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.todo-form__input {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    outline: none;
+}
+
+.todo-form__input:focus {
+    border-color: var(--primary-color);
+}
+
+.todo-form__button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.todo-form__button:hover {
+    background-color: var(--primary-hover);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

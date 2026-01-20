@@ -4,4 +4,9 @@ let ContactList = [
     {nombre: "Pedro", telefono: "12345678"}
 ];
 
-export { ContactList };
+let TaskList = [
+    {id: 1, title: "Aprender JS", done: false},
+    {id: 2, title: "Hacer ejercicio", done: true}
+];
+
+export { ContactList, TaskList };
