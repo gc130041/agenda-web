@@ -5,8 +5,8 @@ let ContactList = [
 ];
 
 let TaskList = [
-    {id: 1, title: "Aprender JS", done: false},
-    {id: 2, title: "Hacer ejercicio", done: true}
+    {id: 1, title: "Aprender JS", dueDate: "2026-03-13", done: false},
+    {id: 2, title: "Hacer ejercicio", dueDate: "2026-02-09", done: false}
 ];
 
 export { ContactList, TaskList };
