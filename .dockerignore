@@ -1,0 +1,13 @@
+touch .dockerignore
+
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+LICENSE
+
+node_modules/
+
+*.tmp
+*.temp
