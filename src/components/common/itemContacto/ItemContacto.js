@@ -1,6 +1,9 @@
+import { Modal } from "../modal/Modal.js";
+
 let ItemContacto = (imgContacto, nombre, telefono, isFavorite, onDelete, onToggleFavorite) => {
     let div = document.createElement("div");
     div.className = "item-contacto";
+    div.style.cursor = "pointer";
     
     let etiquetaImg = document.createElement("img");
     etiquetaImg.src = `./assets/icons/${imgContacto}`;
@@ -55,8 +58,61 @@ let ItemContacto = (imgContacto, nombre, telefono, isFavorite, onDelete, onToggl
     deleteBtn.style.cursor = "pointer";
     deleteBtn.style.marginLeft = "10px";
 
-    deleteBtn.addEventListener("click", () => {
+    deleteBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         if (onDelete) onDelete();
+    });
+
+    div.addEventListener("click", () => {
+        let formContainer = document.createElement("div");
+        formContainer.className = "contact-form"; 
+        formContainer.style.boxShadow = "none";
+        formContainer.style.border = "none";
+        formContainer.style.padding = "0";
+        formContainer.style.margin = "0";
+
+        let title = document.createElement("h3");
+        title.textContent = "Detalles del Contacto";
+        title.style.textAlign = "center";
+        title.style.marginBottom = "20px";
+        title.style.color = "var(--text-color)";
+
+        let imgPreview = document.createElement("img");
+        imgPreview.src = `./assets/icons/${imgContacto}`;
+        imgPreview.style.width = "80px";
+        imgPreview.style.display = "block";
+        imgPreview.style.margin = "0 auto 20px auto";
+        imgPreview.style.backgroundColor = "#e0e7ff";
+        imgPreview.style.borderRadius = "50%";
+        imgPreview.style.padding = "10px";
+
+        let labelName = document.createElement("label");
+        labelName.className = "contact-form__label";
+        labelName.textContent = "Nombre";
+        
+        let inputName = document.createElement("input");
+        inputName.className = "contact-form__input";
+        inputName.value = nombre;
+        inputName.disabled = true;
+
+        let labelPhone = document.createElement("label");
+        labelPhone.className = "contact-form__label";
+        labelPhone.textContent = "Teléfono";
+        labelPhone.style.marginTop = "10px";
+
+        let inputPhone = document.createElement("input");
+        inputPhone.className = "contact-form__input";
+        inputPhone.value = telefono;
+        inputPhone.disabled = true;
+
+        formContainer.appendChild(title);
+        formContainer.appendChild(imgPreview);
+        formContainer.appendChild(labelName);
+        formContainer.appendChild(inputName);
+        formContainer.appendChild(labelPhone);
+        formContainer.appendChild(inputPhone);
+
+        Modal(formContainer);
     });
 
     div.appendChild(etiquetaImg);
