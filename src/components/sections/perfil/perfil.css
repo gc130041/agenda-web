@@ -1,0 +1,60 @@
+.perfil-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.perfil-card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-img {
+    width: 80px;
+    height: 80px;
+    filter: invert(33%) sepia(82%) saturate(2768%) hue-rotate(212deg) brightness(98%) contrast(96%);
+}
+
+.perfil-info {
+    width: 100%;
+    text-align: center;
+}
+
+.perfil-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.perfil-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.perfil-value:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}

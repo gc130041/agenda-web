@@ -41,7 +41,7 @@ section:has(input[type="password"]) input:focus {
 section:has(input[type="password"]) button {
     width: 100%;
     padding: 14px;
-    background-color: var(--primary-color);
+    background-color: gray;
     color: white;
     border: none;
     border-radius: 8px;
