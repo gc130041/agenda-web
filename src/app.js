@@ -1,10 +1,11 @@
 import { Button } from "./components/common/button/Button.js";
-import { viewContacts, viewFormulario, viewToDoList, viewCreateTask } from "./components/layout/nav/NavControlers.js";
+import { viewContacts, viewFormulario, viewToDoList, viewCreateTask, viewFavoritos } from "./components/layout/nav/NavControlers.js";
 
 let app = document.getElementById("app");
 let nav = document.getElementById("nav");
 
 nav.appendChild(Button("Agenda", "agenda", "perm_contact_calendar.svg", viewContacts));
+nav.appendChild(Button("Favoritos", "favoritos", "star_shine.svg", viewFavoritos));
 nav.appendChild(Button("+ Contacto", "plus", "add.svg", viewFormulario));
 nav.appendChild(Button("ToDoList", "todoList", "list_alt_check.svg", viewToDoList));
 nav.appendChild(Button("Crear tarea", "plusTask", "add.svg", viewCreateTask));
