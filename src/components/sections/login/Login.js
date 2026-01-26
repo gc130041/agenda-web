@@ -17,7 +17,7 @@ let login = function () {
     button.innerHTML = "Iniciar Sesión";
 
     button.addEventListener("click", () => {
-        window.location.href = "/src/app.html";
+        window.location.href = "agenda-web/src/app.html";
     });
 
     login.appendChild(h3);
